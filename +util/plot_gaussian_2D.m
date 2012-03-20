@@ -5,7 +5,7 @@ function plot_gaussian_2D(mu, lmbda, color, centermarker, ax)
 
     t = [0:0.01:2*pi,0];
     circle = [sin(t);cos(t)];
-    ellipse = chol(lmbda)*circle;
+    ellipse = chol(lmbda)'*circle;
     
     if strcmp(class(color),class('string'))
         if centermarker

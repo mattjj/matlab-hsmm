@@ -52,7 +52,7 @@ classdef gaussian < handle
         end
         
         function sample = rvs(self,num)
-            sample = bsxfun(@plus,self.mu,cholcov(self.sigma)*randn(self.ndim,num));
+            sample = bsxfun(@plus,self.mu,cholcov(self.sigma)'*randn(self.ndim,num));
         end
 
         function plot(self,color,ax)
@@ -70,7 +70,7 @@ classdef gaussian < handle
     methods(Static)
         function [mu, lmbda] = sample_niw(mu_0,lmbda_0,nu_0,kappa_0)
             lmbda = iwishrnd(lmbda_0,nu_0);
-            mu = cholcov(lmbda/kappa_0)*(randn(size(lmbda_0,1),1))+mu_0;
+            mu = cholcov(lmbda/kappa_0)'*(randn(size(lmbda_0,1),1))+mu_0;
         end
     end
 end
