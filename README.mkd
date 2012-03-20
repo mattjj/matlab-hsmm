@@ -1,1 +1,17 @@
-I should write something here...
+## A Matlab Library for Sampling HDP-HSMMs ##
+This code provides a simple but extensible library for Bayesian inference in (HDP-)HSMMs and (HDP-)HMMs.
+
+This is a bare-bones Matlab implementation of the HSMM library I maintain for Python, [py-hsmm](https://github.com/mattjj/py-hsmm). However, the basics are all here, and it should be easy to extend for your purposes (if even just adding some of the observation or duration distribution classes present in the Python version).
+
+You can download this library with the usual git command:
+
+```
+git clone git://github.com/mattjj/matlab-hsmm.git
+```
+
+If you don't like git, you can download the source files directly on the [Downloads page](https://github.com/mattjj/matlab-hsmm/downloads).
+
+There is an included `demo.m` file, which you can run to produce figures like the ones below.
+
+![truth](http://www.mit.edu/~mattjj/github/matlab-hsmm/truth.png)
+![sampled](http://www.mit.edu/~mattjj/github/matlab-hsmm/sampled.png)
