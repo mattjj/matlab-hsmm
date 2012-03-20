@@ -15,3 +15,6 @@ There is an included `demo.m` file, which you can run to produce figures like th
 
 ![truth](http://www.mit.edu/~mattjj/github/matlab-hsmm/truth.png)
 ![sampled](http://www.mit.edu/~mattjj/github/matlab-hsmm/sampled.png)
+
+## TODO ##
+* There may be a bug in the Gaussian plotting or resampling.
